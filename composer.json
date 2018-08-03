@@ -6,7 +6,6 @@
 	"require": {
 		"php": ">=7.2.0",
 		"php-ipv6": "*",
-		"php-64bit": "*",
 		"ext-bcmath": "*",
 		"ext-pthreads": ">=3.1.7dev",
 		"ext-sockets": "*",
