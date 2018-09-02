@@ -127,7 +127,7 @@ class Session{
 	/** @var int */
 	private $lastPingMeasure = 1;
 
-	public function __construct(SessionManager $sessionManager, InternetAddress $address, int $clientId, int $mtuSize){
+	public function __construct(SessionManager $sessionManager, InternetAddress $address, $clientId, int $mtuSize){
 		$this->sessionManager = $sessionManager;
 		$this->address = $address;
 		$this->id = $clientId;
@@ -155,7 +155,7 @@ class Session{
 		return $this->address;
 	}
 
-	public function getID() : int{
+	public function getID(){
 		return $this->id;
 	}
 
@@ -538,10 +538,10 @@ class Session{
 	}
 
 	/**
-	 * @param int $sendPingTime
-	 * @param int $sendPongTime TODO: clock differential stuff
+	 * @param int|string $sendPingTime
+	 * @param int|string $sendPongTime TODO: clock differential stuff
 	 */
-	private function handlePong(int $sendPingTime, int $sendPongTime) : void{
+	private function handlePong($sendPingTime, $sendPongTime) : void{
 		$this->lastPingMeasure = $this->sessionManager->getRakNetTimeMS() - $sendPingTime;
 		$this->sessionManager->streamPingMeasure($this, $this->lastPingMeasure);
 	}

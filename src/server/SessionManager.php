@@ -443,7 +443,7 @@ class SessionManager{
 		return isset($this->sessions[$address->toString()]);
 	}
 
-	public function createSession(InternetAddress $address, int $clientId, int $mtuSize) : Session{
+	public function createSession(InternetAddress $address, $clientId, int $mtuSize) : Session{
 		$this->checkSessions();
 
 		$this->sessions[$address->toString()] = $session = new Session($this, clone $address, $clientId, $mtuSize);
