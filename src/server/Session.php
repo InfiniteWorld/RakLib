@@ -567,6 +567,11 @@ class Session{
 	 * @param int|string $sendPongTime TODO: clock differential stuff
 	 */
 	private function handlePong($sendPingTime, $sendPongTime) : void{
+		if(PHP_INT_SIZE < 8) { //On 32-bit, these two values are string numeric representation of an int even they are in the range of int32
+			$sendPingTime = (int) $sendPingTime;
+			$sendPongTime = (int) $sendPongTime;
+		}
+
 		$this->lastPingMeasure = $this->sessionManager->getRakNetTimeMS() - $sendPingTime;
 		$this->sessionManager->streamPingMeasure($this, $this->lastPingMeasure);
 	}
