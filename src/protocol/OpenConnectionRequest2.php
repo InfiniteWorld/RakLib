@@ -24,7 +24,7 @@ use raklib\utils\InternetAddress;
 class OpenConnectionRequest2 extends OfflineMessage{
 	public static $ID = MessageIdentifiers::ID_OPEN_CONNECTION_REQUEST_2;
 
-	/** @var int */
+	/** @var int|string */
 	public $clientID;
 	/** @var InternetAddress */
 	public $serverAddress;
