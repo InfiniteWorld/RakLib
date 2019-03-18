@@ -24,7 +24,7 @@ class UnconnectedPing extends OfflineMessage{
 
 	/** @var int */
 	public $sendPingTime;
-	/** @var int */
+	/** @var int|string */
 	public $clientId;
 
 	protected function encodePayload() : void{

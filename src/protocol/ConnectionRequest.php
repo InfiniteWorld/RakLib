@@ -22,7 +22,7 @@ namespace raklib\protocol;
 class ConnectionRequest extends Packet{
 	public static $ID = MessageIdentifiers::ID_CONNECTION_REQUEST;
 
-	/** @var int */
+	/** @var int|string */
 	public $clientID;
 	/** @var int */
 	public $sendPingTime;

@@ -22,12 +22,12 @@ use raklib\protocol\EncapsulatedPacket;
 interface ServerInstance{
 
 	/**
-	 * @param int    $sessionId
-	 * @param string $address
-	 * @param int    $port
-	 * @param int    $clientID
+	 * @param int        $sessionId
+	 * @param string     $address
+	 * @param int        $port
+	 * @param int|string $clientID
 	 */
-	public function openSession(int $sessionId, string $address, int $port, int $clientID) : void;
+	public function openSession(int $sessionId, string $address, int $port, $clientID) : void;
 
 	/**
 	 * @param int    $sessionId
