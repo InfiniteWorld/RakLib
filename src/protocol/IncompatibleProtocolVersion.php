@@ -22,7 +22,7 @@ class IncompatibleProtocolVersion extends OfflineMessage{
 
 	/** @var int */
 	public $protocolVersion;
-	/** @var int */
+	/** @var int|string */
 	public $serverId;
 
 	protected function encodePayload() : void{

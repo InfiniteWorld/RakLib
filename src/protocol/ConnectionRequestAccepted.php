@@ -31,9 +31,9 @@ class ConnectionRequestAccepted extends Packet{
 	/** @var InternetAddress[] */
 	public $systemAddresses = [];
 
-	/** @var int */
+	/** @var int|string */
 	public $sendPingTime;
-	/** @var int */
+	/** @var int|string */
 	public $sendPongTime;
 
 	public function __construct(string $buffer = "", int $offset = 0){

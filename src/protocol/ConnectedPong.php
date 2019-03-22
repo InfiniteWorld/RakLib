@@ -22,9 +22,9 @@ namespace raklib\protocol;
 class ConnectedPong extends Packet{
 	public static $ID = MessageIdentifiers::ID_CONNECTED_PONG;
 
-	/** @var int */
+	/** @var int|string */
 	public $sendPingTime;
-	/** @var int */
+	/** @var int|string */
 	public $sendPongTime;
 
 	protected function encodePayload() : void{

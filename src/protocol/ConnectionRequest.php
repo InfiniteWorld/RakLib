@@ -24,7 +24,7 @@ class ConnectionRequest extends Packet{
 
 	/** @var int|string */
 	public $clientID;
-	/** @var int */
+	/** @var int|string */
 	public $sendPingTime;
 	/** @var bool */
 	public $useSecurity = false;

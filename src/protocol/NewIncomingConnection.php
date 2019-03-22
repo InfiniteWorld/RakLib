@@ -32,9 +32,9 @@ class NewIncomingConnection extends Packet{
 	/** @var InternetAddress[] */
 	public $systemAddresses = [];
 
-	/** @var int */
+	/** @var int|string */
 	public $sendPingTime;
-	/** @var int */
+	/** @var int|string */
 	public $sendPongTime;
 
 	protected function encodePayload() : void{

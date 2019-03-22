@@ -22,7 +22,7 @@ namespace raklib\protocol;
 class OpenConnectionReply1 extends OfflineMessage{
 	public static $ID = MessageIdentifiers::ID_OPEN_CONNECTION_REPLY_1;
 
-	/** @var int */
+	/** @var int|string */
 	public $serverID;
 	/** @var bool */
 	public $serverSecurity = false;

@@ -22,7 +22,7 @@ namespace raklib\protocol;
 class UnconnectedPing extends OfflineMessage{
 	public static $ID = MessageIdentifiers::ID_UNCONNECTED_PING;
 
-	/** @var int */
+	/** @var int|string */
 	public $sendPingTime;
 	/** @var int|string */
 	public $clientId;
